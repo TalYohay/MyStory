@@ -1,0 +1,24 @@
+.container {
+    padding-top: 50px
+}
+
+.btn {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-left: 25%;
+}
+
+@media only screen and (device-width: 768px) {
+    .container {
+        margin-bottom: 200px;
+    }
+}
+
+@media only screen and (device-width: 1024px) {
+    .container {
+        margin-bottom: 500px;
+    }
+}

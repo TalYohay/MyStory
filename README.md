@@ -1,0 +1,1 @@
+Angular application of StoryBooks where users can share their everyday stories, using Node.js, Express, MongoDB etc, including user registeration, login, personal proﬁle and more.

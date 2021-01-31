@@ -1,0 +1,49 @@
+.btn-rounded {
+    border-radius: 10em;
+}
+
+.btn-info {
+    color: #33b5e5 !important;
+    background-color: lightgray !important;
+    /* border: 2px solid #33b5e5 !important; */
+}
+
+.mybutton {
+    color: #1a73e8;
+    /* pointer-events: none;
+    cursor: default; */
+    text-decoration: none;
+    border-radius: 28px;
+    /* border:1px solid #18ab29; */
+    background-color: lightgray;
+    padding: 8px 16px;
+}
+
+.btn {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.container {
+    margin-top: 70px;
+}
+
+.container h1 {
+    margin-bottom: 70px
+}
+
+@media only screen and (device-width: 768px) {
+    .container {
+        margin-bottom: 200px;
+    }
+}
+
+@media only screen and (device-width: 1024px) {
+    .container {
+        margin-bottom: 500px;
+    }
+}

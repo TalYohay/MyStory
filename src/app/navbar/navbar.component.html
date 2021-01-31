@@ -1,0 +1,58 @@
+<!-- <nav class="grey darken-3">
+    <div class="nav-wrapper container">
+
+        <a href="#!" class="brand-logo center">StoryBooks</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger show-on-large"><i class="fas fa-bars"></i></a>
+        <ul class="sidenav" id="mobile-demo">
+            <li><a routerLink="/stories">Public Stories</a></li>
+            <li><a routerLink="profile">Profile</a></li>
+            <li><a href="/auth/logout">Logout</a></li>
+        </ul>
+    </div>
+</nav> -->
+
+
+<nav class="grey darken-3">
+    <div class="nav-wrapper container">
+
+        <a routerLink="/" class="brand-logo center">StoryBooks</a>
+        <!-- <div *ngIf = "loggedIn()"> -->
+        <a data-target="mobile-demo" class="sidenav-trigger show-on-large"><i class="fas fa-bars"></i></a>
+
+        <ul class="sidenav" id="mobile-demo">
+            <div *ngIf="loggedIn()">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="profile"> <span class="fas fa-user"></span> Hi {{this.firstName}}</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" routerLink="profile"><span class = "fas fa-user-circle"></span>  Profile</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/"> <span class="fas fa-book-reader"></span> Public Stories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="onLogoutClick()"> <span class="fas fa-sign-out-alt"></span> Logout</a>
+                </li>
+
+            </div>
+
+
+
+
+            <div *ngIf="!loggedIn()">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/"> <span class="fas fa-book-reader"></span> Public Stories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="login"> <span class="fas fa-sign-in-alt"></span> Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="register"> <span class="fas fa-user-plus"></span> Register</a>
+                </li>
+            </div>
+
+
+
+
+        </ul>
+        <!-- </div> -->
+    </div>
+</nav>

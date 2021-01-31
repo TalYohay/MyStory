@@ -1,0 +1,46 @@
+<div class="container">
+    <h1>Public Stories</h1>
+    <!-- <div class="row row-cols-md-3"> -->
+
+
+    <!-- Grid column -->
+    <!-- <div class="col-lg-4 col-md-12 col-mb-4"> -->
+    <div class="row row-cols-1 row-cols-md-3">
+        <!--Card-->
+        <div *ngFor="let story of stories">
+
+            <div class="text-center">
+                <mdb-card class="h-100">
+
+
+                    <!--Card content-->
+                    <mdb-card-body>
+                        <!--Title-->
+                        <mdb-card-title>
+                            <h2>{{story.title}}</h2>
+                        </mdb-card-title>
+                        <mdb-card-text><strong><p class="text-dark">{{story.createdAt}}</p></strong></mdb-card-text>
+                        <!-- <mdb-card-text><p class="text-dark">{{story.createdAt}}</p></mdb-card-text> -->
+                        <hr>
+                        <!--Text-->
+                        <mdb-card-text>
+                            <p class="text-dark">{{story.body | words: 30}}</p>
+                        </mdb-card-text>
+
+                        <br>
+                        <mdb-card-text>
+                            <a [routerLink]="['/stories/user', story.UserId]" class="mybutton"> <strong>{{story.userName}}</strong></a>
+                        </mdb-card-text>
+                        <br>
+
+                        <a [routerLink]="['/stories/story', story._id]" class="btn grey">Read More</a>
+
+                    </mdb-card-body>
+                </mdb-card>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+
+
+</div>

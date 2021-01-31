@@ -1,0 +1,24 @@
+<div *ngIf="user">
+    <div class = "container">
+        <h3 class = "page-header">Welcome {{user.firstName}} {{user.lastName}}</h3>
+       
+        <ul class = "list-group">
+            <li class = "list-group-item">Name: {{user.firstName}} {{user.lastName}}</li>
+            <li class = "list-group-item">Email: {{user.email}}</li>
+            <li class = "list-group-item nav nav-pills nav-justified">
+                <a routerLink="/profile/mystories"><span class="fas fa-book-open"></span>  My Stories</a>
+            </li>
+            <li class = "list-group-item nav nav-pills nav-justified">
+                <a routerLink = "/stories/add"><span class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">+</i></span></a>
+            </li>
+           
+
+
+        </ul>
+
+       
+    </div>
+</div>
+
+
+

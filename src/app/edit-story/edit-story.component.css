@@ -1,0 +1,8 @@
+.container {
+    padding-top: 50px
+}
+
+.btn-cyan,
+.btn-amber {
+    line-height: 10px;
+}

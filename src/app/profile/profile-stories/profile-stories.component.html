@@ -1,0 +1,45 @@
+<div class="container">
+
+    <!-- User Stories -->
+    <h5>Here are your stories:</h5>
+    <br>
+    <div *ngIf="myStories && myStories.length > 0">
+
+        <div class="col-md-7">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead class="table-success">
+                        <tr>
+                            <th scope="col">Title</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Update</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr *ngFor="let myStory of myStories; let i = index">
+                            <td><a [routerLink]="['/stories/story', myStory._id]">{{myStory.title}}</a></td>
+                            <td>{{myStory.createdAt}}</td>
+
+
+                            <td>
+
+                                <span class="btn blue" [routerLink]="['/stories/edit', myStory._id]" style='color: white'><i class = "fas fa-edit"></i></span>
+                                <span class="btn red" (click)="deleteStory(myStory, i)"> <i class="fas fa-trash" style = "color: white "></i></span>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container" *ngIf="!myStories || myStories.length === 0">
+    <h2>You have no stories!</h2>
+</div>

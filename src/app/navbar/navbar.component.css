@@ -1,0 +1,12 @@
+.nav-item:hover .nav-link{
+    color: black;
+}
+
+.brand-logo:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.sidenav-trigger{
+    cursor: pointer;
+}

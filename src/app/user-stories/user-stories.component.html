@@ -1,0 +1,43 @@
+<div class="container">
+    <div *ngFor="let story of (storiesByUserId? storiesByUserId.slice(0,1):[])">
+        <h1>More stories by {{story.userName}}</h1>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3">
+        <!--Card-->
+        <div *ngFor="let story of storiesByUserId">
+
+            <br>
+
+            <div class="text-center">
+                <mdb-card class="h-100">
+
+
+                    <!--Card content-->
+                    <mdb-card-body>
+                        <!--Title-->
+                        <mdb-card-title>
+                            <h2>{{story.title}}</h2>
+
+                        </mdb-card-title>
+                        <hr>
+                        <!--Text-->
+                        <mdb-card-text>
+                            <p class="text-dark">{{story.body | words: 30}}</p>
+
+                        </mdb-card-text>
+                        <br>
+                        <!-- <mdb-card-text><a [routerLink] ="['/stories/user', story.UserId]" class = "mybutton"> <strong>{{story.userName}}</strong></a></mdb-card-text> -->
+                        <br>
+
+                        <a [routerLink]="['/stories/story', story._id]" class="btn grey">Read More</a>
+
+                    </mdb-card-body>
+                </mdb-card>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+
+
+</div>

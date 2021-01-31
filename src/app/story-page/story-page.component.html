@@ -1,0 +1,25 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-8">
+            <h3>{{storyData?.title}}</h3>
+            <br>
+            <div class="card story">
+                <div class="card-content">
+                    <span class="card-title">{{storyData?.createdAt}}</span> {{storyData?.body}}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card center-align">
+                <div class="card-content">
+                    <span class="card-title">{{storyData?.userName}}</span>
+
+                </div>
+                <div class="card-action">
+                    <a [routerLink]="['/stories/user/',storyData?.UserId]">More From {{storyData?.userName}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
